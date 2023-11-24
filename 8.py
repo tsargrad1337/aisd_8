@@ -43,7 +43,7 @@ def generate_and_get_best_variant():
         best_variant = array_variants.get_best_variant(max_sum)
 
         result_window = tk.Toplevel(root)
-        result_label = tk.Label(result_window, text=f"Результат: {best_variant}")
+        result_label = tk.Label(result_window, text = f"Результат: {best_variant}")
         result_label.pack()
     except ValueError as e:
         messagebox.showerror("Ошибка", str(e))

@@ -28,9 +28,9 @@ class ArrayVariants:
                 print(f"Полученный вариант: {variant}, сумма элементов: {sum(variant)}")  # выводим каждый вариант перед проверкой
                 if sum(variant) <= max_sum:
                     variants.append(variant)
-        
-        best_variant = max(variants[::-1], key = sum)
-        return best_variant
+        if variants:
+            best_variant = max(variants[::-1], key = sum)
+            return best_variant
 
 def generate_and_get_best_variant():
     try:
